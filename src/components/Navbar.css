@@ -1,0 +1,99 @@
+.ball { 
+    
+    
+    animation: bounce 0.5s; 
+    animation-direction: alternate; 
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+    animation-iteration-count: infinite; 
+} 
+  
+@keyframes bounce { 
+    from { 
+        transform: translate3d(0, -15px, 0); 
+        transform: rotate('0deg');
+    } 
+    to { 
+        transform: translate3d(0, 25px, 0); 
+        transform: rotate('90deg');
+    } 
+} 
+
+  
+.ball { 
+    -webkit-animation-name: bounce; 
+    -webkit-animation-duration: 0.5s; 
+    -webkit-animation-direction: alternate; 
+    -webkit-animation-timing-function: cubic-bezier( 
+    .5, 0.05, 1, .5); 
+    -webkit-animation-iteration-count: infinite; 
+} 
+  
+@-webkit-keyframes bounce { 
+    from { 
+        -webkit-transform: translate3d(0, 0, 0); 
+        transform: translate3d(0, 0, 0); 
+    } 
+    to { 
+        -webkit-transform: translate3d(0, 200px, 0); 
+        transform: translate3d(0, 200px, 0); 
+    } 
+} 
+
+@keyframes blinkred {
+    0%, 50%, 100% {
+      background-color: rgba(239 ,68, 68, 1); /* Red with full opacity */
+    }
+    25%, 75% {
+      background-color: grey; /* Red with no opacity (transparent) */
+    }
+  }
+
+  @keyframes blinkgreen {
+    0%, 50%, 100% {
+      background-color: rgba(34, 197, 94, 1); /* Blue with full opacity */
+    }
+    25%, 75% {
+      background-color: grey; /* Blue with no opacity (transparent) */
+    }
+  }
+
+  @keyframes blinkyellow {
+    0%, 50%, 100% {
+      background-color: rgba(234, 179 ,8, 1); /* Yellow with full opacity */
+    }
+    25%, 75% {
+      background-color: grey; /* Yellow with no opacity (transparent) */
+    }
+  }
+
+
+  
+
+  .ball-1 {
+    animation: blinkgreen 2s 2;
+  }
+
+  .ball-2 {
+    animation: blinkyellow 2s 2;
+  }
+
+  .ball-3 {
+    animation: blinkred 2s 2;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      background-color: #60a5fa; /* Initial color */
+      box-shadow: 0 0 20px 5px #60a5fa; /* Initial glow effect */
+    }
+    50% {
+      background-color: #066de1; /* Brighter color */
+      box-shadow: 0 0 30px 10px #066de1; /* Stronger glow effect */
+    }
+  }
+
+  .glowing-ball {
+    
+    box-shadow: 0 0 20px 5px #066de1;; /* Initial glow effect */
+    animation: glow 1.5s infinite;
+  }
